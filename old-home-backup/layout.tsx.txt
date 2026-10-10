@@ -1,0 +1,35 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { DM_Sans, Space_Mono } from "next/font/google";
+
+const fontSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const fontMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-space-mono",
+});
+
+export const metadata: Metadata = {
+  title: "Layeee-Beta",
+  description: "3D Centralize",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={`${fontSans.className} ${fontMono.variable}`}>
+        {children}
+      </body>
+    </html>
+  );
+}

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #171717;
+
+  --color-primary-white: #faf7f4;
+  --color-secondary-white: #f7f2ed;
+  --color-primary-black: #0a0702;
+
+  --color-dark-orange: #a26b1a;
+  --color-light-orange: #e09f3e;
+}
+
+::selection {
+  background: var(--color-dark-orange);
+  color: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.font-space-mono {
+  font-family: var(--font-space-mono), monospace;
+}
+
+.text-layeee-primary-orange {
+  color: var(--color-dark-orange);
+}
+
+.text-layeee-primary-white {
+  color: var(--color-primary-white);
+}
+
+.bg-layeee-primary-white {
+  background-color: var(--color-primary-white);
+}
+
+.border-layeee-primary-black {
+  border-color: var(--color-primary-black);
+}
+
+.bg-layeee-secondary-white {
+  background-color: var(--color-secondary-white);
+}
+
+.bg-layeee-primary-black {
+  background-color: var(--color-primary-black);
+}
+
+.bg-layeee-dark-orange {
+  background-color: var(--color-dark-orange);
+}
+
+.bg-layeee-light-orange {
+  background-color: var(--color-light-orange);
+}
+
+.bg-layeee-gradient-light-orange {
+  background: linear-gradient(145deg, #e4b267, #f4b860, #e09f3e);
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 2vw, 3rem);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 860px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+  }
+}
