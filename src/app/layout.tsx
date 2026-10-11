@@ -1,13 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Open_Sans, Space_Mono } from "next/font/google";
+import { Google_Sans, Space_Mono } from "next/font/google";
 import Sprite from "@/components/layout/Sprite";
 import "./globals.css";
 
-const fontSans = Open_Sans({
+const fontSans = Google_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-open-sans",
+  variable: "--font-google-sans",
+  /* next/font has no fallback metrics for Google Sans */
+  adjustFontFallback: false,
 });
 
 const fontMono = Space_Mono({
@@ -37,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fontSans.variable} ${fontMono.variable}`}>
-      <body className="bg-bg font-mono text-[15px] leading-[1.6] text-fg antialiased">
+      <body className="bg-bg font-sans text-[clamp(15px,1.17vw,16.5px)] leading-[1.6] text-fg antialiased">
         <Sprite />
         {children}
       </body>

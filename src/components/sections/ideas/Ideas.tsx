@@ -17,7 +17,7 @@ export default function Ideas() {
           />
           <InlineLink href="#faq">Have a question?</InlineLink>
         </div>
-        <div className="mt-14 grid grid-cols-3 items-start gap-5 max-[1100px]:grid-cols-2 max-[640px]:grid-cols-1">
+        <div className="mt-[clamp(32px,4.4vw,56px)] grid grid-cols-3 items-start gap-[clamp(14px,1.6vw,20px)] max-[1100px]:grid-cols-2 max-[640px]:grid-cols-1">
           {ideas.map((idea) => (
             <IdeaCard key={idea.title} idea={idea} />
           ))}

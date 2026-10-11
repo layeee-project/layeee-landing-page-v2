@@ -62,12 +62,19 @@
   --color-code-fg: var(--code-fg);
 
   /* fonts come from next/font in layout.tsx */
-  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-google-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo,
     monospace;
 }
 
 @theme {
+  /* fluid type: the named sizes grow a little on wide screens */
+  --text-xs: clamp(12px, 0.94vw, 13px);
+  --text-sm: clamp(14px, 1.1vw, 15.5px);
+  --text-base: clamp(16px, 1.25vw, 17.5px);
+  --text-lg: clamp(18px, 1.4vw, 20px);
+  --text-xl: clamp(20px, 1.56vw, 22px);
+
   --animate-rise: rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-ping-soft: ping-soft 2.2s ease-out infinite;
 
@@ -95,11 +102,8 @@
 
 /* the wide page container */
 @utility section-width {
-  width: min(1800px, 100% - 96px);
+  width: min(1800px, 100% - clamp(40px, 6.5vw, 96px));
   margin-inline: auto;
-  @media (max-width: 700px) {
-    width: calc(100% - 40px);
-  }
 }
 
 @layer base {
@@ -114,8 +118,15 @@
       scroll-behavior: auto;
     }
   }
+  /* titles use the mono font, everything else inherits font-sans from <body> */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-mono);
+  }
   [id] {
-    scroll-margin-top: 84px;
+    scroll-margin-top: clamp(72px, 6.5vw, 84px);
   }
   :focus-visible {
     outline: 2px solid var(--accent);

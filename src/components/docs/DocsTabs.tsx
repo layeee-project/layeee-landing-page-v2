@@ -22,7 +22,7 @@ export default function DocsTabs({
             role="tab"
             aria-selected={active === i}
             onClick={() => setActive(i)}
-            className="-mb-px cursor-pointer border-b-2 border-transparent px-3 py-2 text-[13.5px] text-muted hover:text-fg aria-selected:border-fg aria-selected:font-semibold aria-selected:text-fg"
+            className="-mb-px cursor-pointer border-b-2 border-transparent px-3 py-2 text-[clamp(13.5px,1.05vw,15px)] text-muted hover:text-fg aria-selected:border-fg aria-selected:font-semibold aria-selected:text-fg"
           >
             {label}
           </button>

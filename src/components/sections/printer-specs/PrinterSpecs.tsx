@@ -23,7 +23,7 @@ export default function PrinterSpecs() {
         <PillList
           items={materialNames}
           label="Supported materials"
-          className="my-[26px]"
+          className="my-[clamp(18px,2vw,26px)]"
         />
         <InlineLink href="#ways">Ways to print</InlineLink>
       </div>

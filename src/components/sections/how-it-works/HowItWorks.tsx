@@ -18,7 +18,7 @@ export default function HowItWorks() {
           title="From idea to the first layer."
           lead="Pick a model, adjust it, choose a printer, and watch the part build up layer by layer."
         />
-        <ul className="mt-[34px] grid gap-5">
+        <ul className="mt-[clamp(24px,2.6vw,34px)] grid gap-[clamp(14px,1.6vw,20px)]">
           {howSteps.map((step) => (
             <li key={step.title} className="grid grid-cols-[40px_1fr] gap-3.5">
               <svg
@@ -28,8 +28,8 @@ export default function HowItWorks() {
                 {step.icon}
               </svg>
               <div>
-                <h3 className="text-[16.5px] font-semibold">{step.title}</h3>
-                <p className="text-[14.5px] text-muted">{step.text}</p>
+                <h3 className="text-[clamp(16.5px,1.29vw,18px)] font-semibold">{step.title}</h3>
+                <p className="text-[clamp(14.5px,1.13vw,16px)] text-muted">{step.text}</p>
               </div>
             </li>
           ))}

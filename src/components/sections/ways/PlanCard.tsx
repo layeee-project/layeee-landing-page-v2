@@ -18,18 +18,18 @@ export default function PlanCard({ plan }: { plan: Plan }) {
         <h3 id={plan.id} className="text-xl font-semibold">
           {plan.title}
         </h3>
-        <span className="rounded-full bg-accent-soft px-2.5 py-[3px] font-mono text-[11.5px] font-medium uppercase tracking-[.06em] text-accent-ink">
+        <span className="rounded-full bg-accent-soft px-2.5 py-[3px] font-mono text-[clamp(11.5px,.9vw,12.5px)] font-medium uppercase tracking-[.06em] text-accent-ink">
           {plan.status}
         </span>
       </div>
       <p className="text-[clamp(34px,3.6vw,48px)] font-medium leading-[1.1] tracking-[-0.02em]">
         {plan.price}{" "}
-        <span className="ml-1.5 text-[15px] font-normal tracking-normal text-muted">
+        <span className="ml-1.5 text-[clamp(15px,1.17vw,16.5px)] font-normal tracking-normal text-muted">
           {plan.priceNote}
         </span>
       </p>
-      <p className="text-[15px] text-muted">{plan.text}</p>
-      <ul className="grid flex-1 gap-2.5 text-[14.5px]">
+      <p className="text-[clamp(15px,1.17vw,16.5px)] text-muted">{plan.text}</p>
+      <ul className="grid flex-1 gap-2.5 text-[clamp(14.5px,1.13vw,16px)]">
         {plan.features.map((f) => (
           <li key={f} className="grid grid-cols-[20px_1fr] gap-2.5">
             <Icon name="check" className="mt-[3px] size-[18px] text-accent" />
@@ -44,7 +44,7 @@ export default function PlanCard({ plan }: { plan: Plan }) {
       >
         {plan.cta.label}
       </Button>
-      <p className="text-[13px] text-muted">{plan.terms}</p>
+      <p className="text-[clamp(13px,1.02vw,14.5px)] text-muted">{plan.terms}</p>
     </article>
   );
 }

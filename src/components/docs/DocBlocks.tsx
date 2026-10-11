@@ -65,10 +65,10 @@ function Block({ block }: { block: DocBlock }) {
     case "code":
       return (
         <div className="relative mt-5 overflow-hidden rounded-xl border border-line bg-code-bg text-code-fg">
-          <span className="absolute top-2.5 right-3 rounded border border-white/12 px-1.5 font-mono text-[10.5px] uppercase tracking-[.08em] text-dark-muted">
+          <span className="absolute top-2.5 right-3 rounded border border-white/12 px-1.5 font-mono text-[clamp(10.5px,.82vw,11.5px)] uppercase tracking-[.08em] text-dark-muted">
             {block.label}
           </span>
-          <pre className="m-0 overflow-x-auto px-5 py-6 font-mono text-[13.5px] leading-[1.8]">
+          <pre className="m-0 overflow-x-auto px-5 py-6 font-mono text-[clamp(13.5px,1.05vw,15px)] leading-[1.8]">
             <code>{block.code}</code>
           </pre>
         </div>
@@ -89,7 +89,7 @@ function Block({ block }: { block: DocBlock }) {
       );
     case "note":
       return (
-        <p className="mt-5 rounded-xl border border-line bg-soft px-4 py-3 text-[14px] text-muted">
+        <p className="mt-5 rounded-xl border border-line bg-soft px-4 py-3 text-[clamp(14px,1.1vw,15.5px)] text-muted">
           <Inline text={block.text} />
         </p>
       );

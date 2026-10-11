@@ -11,12 +11,12 @@ npm run build
 npm start
 ```
 
-Fonts (Open Sans, Space Mono) load through `next/font/google` at build time, so the first build needs internet access.
+Fonts (Google Sans, Space Mono) load through `next/font/google` at build time, so the first build needs internet access.
 
 ## How Tailwind is set up
 
 - `src/app/globals.css` holds the design tokens as CSS variables (`--bg`, `--fg`, `--muted`, `--line`, `--accent` ...) and maps them into Tailwind with `@theme inline`, so you write `bg-bg`, `text-muted`, `border-line`, `text-accent-ink`, and they switch with the theme automatically.
-- Fonts: `font-sans` = Open Sans, `font-mono` = Space Mono (body uses `font-mono`).
+- Fonts: `font-sans` = Google Sans, `font-mono` = Space Mono. Body uses `font-sans`; titles (`h1`–`h4`) use `font-mono` through a base rule in `globals.css`.
 - `section-width` is a custom utility (the wide container, 1800px max).
 - `src/lib/ui.ts` has `cx()` and a few shared class strings (`monoTag`, `inset`, `dots22`). Anything used as an element lives in `src/components/ui/` instead (`Button`, `Chip`, `SectionHeading` ...).
 

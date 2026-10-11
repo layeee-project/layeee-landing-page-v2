@@ -27,14 +27,14 @@ export default function DocsToc({ items }: { items: TocItem[] }) {
 
   return (
     <aside className="sticky top-[57px] h-[calc(100dvh-57px)] overflow-y-auto py-10 pr-6 max-[1200px]:hidden">
-      <p className="text-[13.5px] font-semibold">On this page</p>
+      <p className="text-[clamp(13.5px,1.05vw,15px)] font-semibold">On this page</p>
       <nav className="mt-3 grid" aria-label="On this page">
         {items.map((t) => (
           <a
             key={t.id}
             href={`#${t.id}`}
             className={cx(
-              "border-l py-1.5 text-[13px] no-underline",
+              "border-l py-1.5 text-[clamp(13px,1.02vw,14.5px)] no-underline",
               t.level === 3 ? "pl-7" : "pl-3.5",
               active === t.id
                 ? "border-accent font-semibold text-fg"

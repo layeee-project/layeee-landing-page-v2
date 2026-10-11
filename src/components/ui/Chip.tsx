@@ -11,7 +11,7 @@ export default function Chip({
   return (
     <span
       className={cx(
-        "rounded-full border border-line bg-soft px-[9px] py-[3px] font-mono text-[11.5px] text-muted",
+        "rounded-full border border-line bg-soft px-[9px] py-[3px] font-mono text-[clamp(11.5px,.9vw,12.5px)] text-muted",
         className,
       )}
     >

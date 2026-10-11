@@ -12,7 +12,7 @@ export default function DocsHeader() {
           <span className="h-5 w-px bg-line-strong" aria-hidden="true" />
           <Link
             href="/docs"
-            className="text-[13.5px] font-medium text-muted no-underline hover:text-fg"
+            className="text-[clamp(13.5px,1.05vw,15px)] font-medium text-muted no-underline hover:text-fg"
           >
             Docs
           </Link>

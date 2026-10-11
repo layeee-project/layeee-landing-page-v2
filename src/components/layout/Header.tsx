@@ -18,7 +18,7 @@ export default function Header() {
       id="top"
     >
       <Container>
-        <div className="flex min-h-[68px] items-center justify-between gap-6">
+        <div className="flex min-h-[clamp(56px,5vw,68px)] items-center justify-between gap-[clamp(12px,1.8vw,24px)]">
           <Brand />
           <nav
             className="flex gap-1 max-[900px]:hidden"
@@ -28,7 +28,7 @@ export default function Header() {
               <a
                 key={n.href}
                 href={n.href}
-                className="rounded-lg px-[13px] py-[7px] text-[14.5px] font-medium no-underline hover:bg-soft"
+                className="rounded-lg px-[13px] py-[7px] text-[clamp(14.5px,1.13vw,16px)] font-medium no-underline hover:bg-soft"
               >
                 {n.label}
               </a>

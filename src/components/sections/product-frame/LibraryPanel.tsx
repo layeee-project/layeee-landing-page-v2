@@ -12,7 +12,7 @@ export default function LibraryPanel({ active }: { active: boolean }) {
     <Panel
       id="lib"
       active={active}
-      className="grid-cols-[230px_1fr] max-[860px]:grid-cols-1"
+      className="grid-cols-[clamp(190px,18vw,230px)_1fr] max-[860px]:grid-cols-1"
     >
       <aside className="flex flex-col gap-1 border-r border-line bg-soft px-3.5 py-[18px] max-[860px]:hidden">
         <h4 className={sideHead}>Sources</h4>
@@ -32,7 +32,7 @@ export default function LibraryPanel({ active }: { active: boolean }) {
           ))}
         </ul>
       </aside>
-      <div className="flex min-w-0 flex-col gap-4 p-[18px]">
+      <div className="flex min-w-0 flex-col gap-4 p-[clamp(12px,1.4vw,18px)]">
         <div className="flex items-center gap-2.5 rounded-[10px] border border-line bg-panel px-3.5 py-[9px] text-sm text-muted">
           <svg
             className="size-4 shrink-0"
@@ -58,7 +58,7 @@ export default function LibraryPanel({ active }: { active: boolean }) {
                   <use href={`#${item.shape}`} />
                 </svg>
               </div>
-              <div className="px-3 py-2.5 text-[13.5px]">
+              <div className="px-3 py-2.5 text-[clamp(13.5px,1.05vw,15px)]">
                 <b className="block font-semibold">{item.name}</b>
                 <span className="text-xs text-muted">Demo model</span>
               </div>
