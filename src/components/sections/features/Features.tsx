@@ -12,7 +12,7 @@ export default function Features() {
         lead="Everything between finding a design and holding the part."
         align="center"
       />
-      <div className="mt-14 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-line bg-line max-[980px]:grid-cols-2 max-[600px]:grid-cols-1">
+      <div className="mt-[clamp(32px,4.4vw,56px)] grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-line bg-line max-[980px]:grid-cols-2 max-[600px]:grid-cols-1">
         {features.map((f) => (
           <FeatureCard key={f.title} feature={f} />
         ))}

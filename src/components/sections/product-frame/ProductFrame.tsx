@@ -46,7 +46,7 @@ export default function ProductFrame() {
         <NearPanel active={active === "near"} />
         <S1Panel active={active === "s1"} />
       </div>
-      <p className="mt-4 flex flex-wrap justify-between gap-4 text-[13.5px] text-muted">
+      <p className="mt-4 flex flex-wrap justify-between gap-4 text-[clamp(13.5px,1.05vw,15px)] text-muted">
         <span aria-live="polite" id="caption">
           {captions[active]}
         </span>

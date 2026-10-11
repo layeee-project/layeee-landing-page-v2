@@ -15,7 +15,10 @@ export default function Page() {
   return (
     <div className="overflow-clip">
       <Header />
-      <main className="relative z-10 bg-bg" id="main">
+      <main
+        className="relative z-10 bg-bg selection:bg-[#e69a5c] selection:text-black"
+        id="main"
+      >
         <Hero />
         <ProductFrame />
         <HowItWorks />

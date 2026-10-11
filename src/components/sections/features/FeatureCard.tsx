@@ -8,7 +8,7 @@ export default function FeatureCard({ feature }: { feature: Feature }) {
         {feature.icon}
       </svg>
       <h3 className="text-lg font-semibold">{feature.title}</h3>
-      <p className="max-w-[42ch] text-[15px] text-muted">{feature.text}</p>
+      <p className="max-w-[42ch] text-[clamp(15px,1.17vw,16.5px)] text-muted">{feature.text}</p>
     </article>
   );
 }

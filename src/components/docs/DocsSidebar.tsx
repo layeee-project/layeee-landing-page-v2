@@ -37,7 +37,7 @@ export default function DocsSidebar() {
         aria-current={active ? "page" : undefined}
         onClick={() => setOpen(false)}
         className={cx(
-          "block rounded-lg px-2.5 py-1.5 text-[13.5px] no-underline",
+          "block rounded-lg px-2.5 py-1.5 text-[clamp(13.5px,1.05vw,15px)] no-underline",
           active
             ? "bg-soft font-semibold text-fg"
             : "text-muted hover:bg-soft hover:text-fg",
@@ -52,7 +52,7 @@ export default function DocsSidebar() {
     <aside className="sticky top-[57px] h-[calc(100dvh-57px)] overflow-y-auto border-r border-line px-3 py-4 max-[900px]:static max-[900px]:h-auto max-[900px]:border-r-0 max-[900px]:border-b">
       <button
         type="button"
-        className="hidden w-full cursor-pointer items-center justify-between rounded-lg border border-line px-3 py-2 text-[13.5px] font-medium max-[900px]:flex"
+        className="hidden w-full cursor-pointer items-center justify-between rounded-lg border border-line px-3 py-2 text-[clamp(13.5px,1.05vw,15px)] font-medium max-[900px]:flex"
         aria-expanded={open}
         aria-controls="docsNav"
         onClick={() => setOpen((o) => !o)}
@@ -71,9 +71,9 @@ export default function DocsSidebar() {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Filter..."
             aria-label="Filter docs pages"
-            className="min-w-0 flex-1 bg-transparent text-[13.5px] outline-none placeholder:text-muted"
+            className="min-w-0 flex-1 bg-transparent text-[clamp(13.5px,1.05vw,15px)] outline-none placeholder:text-muted"
           />
-          <kbd className="rounded border border-line bg-soft px-1.5 font-mono text-[11px] text-muted">
+          <kbd className="rounded border border-line bg-soft px-1.5 font-mono text-[clamp(11px,.86vw,12px)] text-muted">
             /
           </kbd>
         </label>
@@ -84,7 +84,7 @@ export default function DocsSidebar() {
             if (!children.length) return null;
             return (
               <details key={entry.label} open className="group">
-                <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-2.5 py-1.5 text-[13.5px] text-muted hover:bg-soft hover:text-fg [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-2.5 py-1.5 text-[clamp(13.5px,1.05vw,15px)] text-muted hover:bg-soft hover:text-fg [&::-webkit-details-marker]:hidden">
                   {entry.label}
                   <Icon
                     name="chev"

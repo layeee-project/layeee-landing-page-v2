@@ -28,8 +28,8 @@ export default function Button({
           ? "border-btn-bg bg-btn-bg text-btn-fg"
           : "border-line-strong bg-transparent text-fg hover:bg-soft hover:opacity-100",
         size === "sm"
-          ? "rounded-[9px] px-3.5 py-2 text-[13.5px]"
-          : "rounded-[11px] px-5 py-3 text-[14.5px]",
+          ? "rounded-[9px] px-3.5 py-2 text-[clamp(13.5px,1.05vw,15px)]"
+          : "rounded-[11px] px-5 py-3 text-[clamp(14.5px,1.13vw,16px)]",
         className,
       )}
     >

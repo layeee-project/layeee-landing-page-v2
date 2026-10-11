@@ -11,7 +11,7 @@ export default function ButtonRow({
   return (
     <div
       className={cx(
-        "mt-[34px] flex flex-wrap gap-2.5",
+        "mt-[clamp(24px,2.6vw,34px)] flex flex-wrap gap-2.5",
         align === "center" && "justify-center",
       )}
     >

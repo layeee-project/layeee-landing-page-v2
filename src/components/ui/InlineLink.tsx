@@ -10,7 +10,7 @@ export default function InlineLink({
 }) {
   return (
     <a
-      className="inline-flex items-center gap-1.5 text-[14.5px] font-semibold text-accent-ink no-underline hover:underline hover:underline-offset-[3px]"
+      className="inline-flex items-center gap-1.5 text-[clamp(14.5px,1.13vw,16px)] font-semibold text-accent-ink no-underline hover:underline hover:underline-offset-[3px]"
       href={href}
     >
       {children}

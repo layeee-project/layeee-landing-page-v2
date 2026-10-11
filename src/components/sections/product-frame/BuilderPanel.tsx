@@ -8,14 +8,14 @@ export default function BuilderPanel({ active }: { active: boolean }) {
     <Panel
       id="builder"
       active={active}
-      className="grid-cols-[76px_1fr_260px] max-[860px]:grid-cols-1"
+      className="grid-cols-[76px_1fr_clamp(210px,20vw,260px)] max-[860px]:grid-cols-1"
     >
       <div className="flex flex-col gap-1.5 border-r border-line bg-soft px-2 py-3 max-[860px]:flex-row max-[860px]:overflow-x-auto max-[860px]:border-r-0 max-[860px]:border-b">
         {builderTools.map((t, i) => (
           <span
             key={t}
             className={cx(
-              "rounded-lg px-0.5 py-[9px] text-center font-mono text-[11px] font-medium max-[860px]:flex-1",
+              "rounded-lg px-0.5 py-[9px] text-center font-mono text-[clamp(11px,.86vw,12px)] font-medium max-[860px]:flex-1",
               i === 0 ? cx("bg-panel text-fg", inset) : "text-muted",
             )}
           >
@@ -48,7 +48,7 @@ export default function BuilderPanel({ active }: { active: boolean }) {
           </g>
         </svg>
       </div>
-      <div className="flex flex-col gap-2.5 border-l border-line px-4 py-[18px] text-[13.5px] max-[860px]:border-t max-[860px]:border-l-0">
+      <div className="flex flex-col gap-2.5 border-l border-line px-4 py-[18px] text-[clamp(13.5px,1.05vw,15px)] max-[860px]:border-t max-[860px]:border-l-0">
         {builderGroups.map((group) => (
           <div key={group.title} className="flex flex-col gap-2.5">
             <h4 className={monoTag}>{group.title}</h4>

@@ -7,7 +7,7 @@ const val = "font-medium text-[#ff9b58]";
 export default function SpecCode() {
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-code-bg text-code-fg">
-      <div className="flex items-center gap-2.5 border-b border-white/12 px-5 py-3.5 font-mono text-[13px] font-medium text-dark-muted">
+      <div className="flex items-center gap-2.5 border-b border-white/12 px-5 py-3.5 font-mono text-[clamp(13px,1.02vw,14.5px)] font-medium text-dark-muted">
         <svg
           className="size-4"
           viewBox="0 0 16 16"

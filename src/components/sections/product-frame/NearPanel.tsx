@@ -12,7 +12,7 @@ export default function NearPanel({ active }: { active: boolean }) {
     <Panel
       id="near"
       active={active}
-      className="grid-cols-[340px_1fr] max-[860px]:grid-cols-1"
+      className="grid-cols-[clamp(260px,26vw,340px)_1fr] max-[860px]:grid-cols-1"
     >
       <div className="flex flex-col gap-2.5 border-r border-line bg-soft p-3.5 max-[860px]:border-r-0 max-[860px]:border-b">
         {nearbyPrinters.map((p) => (
@@ -25,17 +25,17 @@ export default function NearPanel({ active }: { active: boolean }) {
                 : "border-line bg-panel",
             )}
           >
-            <b className="flex justify-between gap-2 text-[14.5px]">
+            <b className="flex justify-between gap-2 text-[clamp(14.5px,1.13vw,16px)]">
               Printer near you <Chip>{p.distance}</Chip>
             </b>
-            <span className="text-[12.5px] text-muted">
+            <span className="text-[clamp(12.5px,.98vw,13.5px)] text-muted">
               {p.materials} · Demo data
             </span>
           </div>
         ))}
       </div>
       <div
-        className="relative min-h-80 bg-[linear-gradient(var(--line)_1px,transparent_1px),linear-gradient(90deg,var(--line)_1px,transparent_1px)] bg-[length:48px_48px]"
+        className="relative min-h-[clamp(240px,25vw,320px)] bg-[linear-gradient(var(--line)_1px,transparent_1px),linear-gradient(90deg,var(--line)_1px,transparent_1px)] bg-[length:48px_48px]"
         aria-hidden="true"
       >
         <span className={cx(ring, "w-[62%]")} />

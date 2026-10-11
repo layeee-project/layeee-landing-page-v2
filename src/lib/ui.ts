@@ -4,7 +4,7 @@ export const cx = (...a: (string | false | null | undefined)[]) =>
 
 /* shared Tailwind class recipes */
 export const monoTag =
-  "font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted";
+  "font-mono text-[clamp(11px,.86vw,12px)] font-medium uppercase tracking-[.1em] text-muted";
 export const inset = "shadow-[inset_0_0_0_1px_var(--line)]";
 export const dots22 =
   "bg-[radial-gradient(var(--line)_1px,transparent_1px)] bg-[length:22px_22px]";

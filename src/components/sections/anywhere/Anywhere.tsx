@@ -32,20 +32,20 @@ export default function Anywhere() {
               One design, two ways to print it. Use the S1 on your desk, or let
               the app show you a printing service close to where you are.
             </p>
-            <Button href="#closing" className="mt-[30px]">
+            <Button href="#closing" className="mt-[clamp(22px,2.3vw,30px)]">
               Get started
             </Button>
           </div>
           <PrintOptionsDiagram />
         </div>
-        <ol className="mt-16 grid grid-cols-3 gap-5 max-[700px]:grid-cols-1">
+        <ol className="mt-[clamp(40px,5vw,64px)] grid grid-cols-3 gap-[clamp(14px,1.6vw,20px)] max-[700px]:grid-cols-1">
           {anywhereSteps.map((s) => (
             <li key={s.number} className="border-t border-line-strong pt-[18px]">
-              <span className="font-mono text-[13px] font-medium text-accent-ink">
+              <span className="font-mono text-[clamp(13px,1.02vw,14.5px)] font-medium text-accent-ink">
                 {s.number}
               </span>
               <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
-              <p className="mt-1.5 max-w-[38ch] text-[14.5px] text-muted">
+              <p className="mt-1.5 max-w-[38ch] text-[clamp(14.5px,1.13vw,16px)] text-muted">
                 {s.text}
               </p>
             </li>

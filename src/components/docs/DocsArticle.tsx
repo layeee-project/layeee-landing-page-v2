@@ -16,11 +16,11 @@ export default function DocsArticle({ page }: { page: DocPage }) {
     <div className="grid grid-cols-[minmax(0,1fr)_240px] max-[1200px]:grid-cols-1">
       <main
         id="main"
-        className="min-w-0 px-[clamp(20px,5vw,72px)] pt-10 pb-24 text-[15px] leading-[1.7]"
+        className="min-w-0 px-[clamp(20px,5vw,72px)] pt-10 pb-24 text-[clamp(15px,1.17vw,16.5px)] leading-[1.7]"
       >
         <article className="mx-auto max-w-[680px]" id="doc">
           <nav
-            className="flex gap-2 text-[12.5px] text-muted"
+            className="flex gap-2 text-[clamp(12.5px,.98vw,13.5px)] text-muted"
             aria-label="Breadcrumb"
           >
             <Link href="/" className="no-underline hover:text-fg">
@@ -35,7 +35,7 @@ export default function DocsArticle({ page }: { page: DocPage }) {
           <p className="mt-4 text-[clamp(16px,1.3vw,18px)] text-muted">
             {page.lead}
           </p>
-          <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-line pb-5 text-[12.5px] text-muted">
+          <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-line pb-5 text-[clamp(12.5px,.98vw,13.5px)] text-muted">
             <span>
               Updated <span className="text-fg">{page.updated}</span>
             </span>
@@ -56,7 +56,7 @@ export default function DocsArticle({ page }: { page: DocPage }) {
                   className={
                     s.level === 2
                       ? "group mt-14 text-[clamp(24px,2.6vw,31px)] font-medium leading-[1.2] tracking-[-0.02em]"
-                      : "group mt-9 text-[19px] font-semibold"
+                      : "group mt-9 text-[clamp(19px,1.48vw,21px)] font-semibold"
                   }
                 >
                   {s.title}
@@ -74,12 +74,12 @@ export default function DocsArticle({ page }: { page: DocPage }) {
           })}
 
           <nav
-            className="mt-16 grid grid-cols-2 gap-3 border-t border-line pt-6 text-[14px] max-[560px]:grid-cols-1"
+            className="mt-16 grid grid-cols-2 gap-3 border-t border-line pt-6 text-[clamp(14px,1.1vw,15.5px)] max-[560px]:grid-cols-1"
             aria-label="More docs"
           >
             {prev ? (
               <Link href={docHref(prev.slug)} className={pagerLink}>
-                <span className="text-[12px] text-muted">Previous</span>
+                <span className="text-[clamp(12px,.94vw,13px)] text-muted">Previous</span>
                 <span className="font-semibold">{prev.title}</span>
               </Link>
             ) : (
@@ -90,7 +90,7 @@ export default function DocsArticle({ page }: { page: DocPage }) {
                 href={docHref(next.slug)}
                 className={`${pagerLink} text-right`}
               >
-                <span className="text-[12px] text-muted">Next</span>
+                <span className="text-[clamp(12px,.94vw,13px)] text-muted">Next</span>
                 <span className="font-semibold">{next.title}</span>
               </Link>
             )}
